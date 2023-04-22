@@ -33,8 +33,28 @@
             <li><a href="#"><img src="./assets/images/icons/instagram black.1.png" alt=""></a></li>
         </ul>
 
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> -->
+
+            <!-- hamburger menu -->
+            <div id="myNav" class="overlay">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <div class="overlay-content">
+                <a href="#about">About Us</a>
+                <a href="#aims">Aims</a>
+                <a href="#donate">Donate</a>
+                <a href="#footer">Contact</a>
+                </div>
+            
+            </div>
+
+
+            <span class="openbtn" onclick="openNav()"> &#9776; </span>
+
     </nav>
+
+
+ 
 
     <!-- HERO -->
 
@@ -51,82 +71,77 @@
         </div>
     </section>
 
+
     <!-- ABOUT -->
 
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="div1">
-                    <div class="col-lg-5 col-md-12">
-                        <div class="sub-divA">
-                            <div class="card1">
-                                <span>The MOBI is Zimbabwe’s very first Mobile Soup Kitchen,
-                                    providing nutritious meals and support to women and children
-                                    in some of our most vulnerable and isolated communities.
-                                </span>
+    <section id="about" class="about" >
+        <div class="about-content">
+            <div class="col-lg-5 col-md-12">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>The MOBI is Zimbabwe’s very first Mobile Soup Kitchen,
+                            providing nutritious meals and support to women and children
+                            in some of our most vulnerable and isolated communities.
+                        </h3>
 
-                                <p>The MOBI was launched in October 2021 and is already providing its
-                                    beneficiaries with crucial access to nutrition, support,
-                                    education, healthcare and long term change.
-                                </p>
-                            </div>
-                            <div class="card2">
-                                <p>
-                                    The MOBI is an initiative that aims to reduce hunger and poverty
-                                    in women and children, with a focus:
-                                </p>
-                                <ul>
-                                    <li>Food & nutrition</li>
-                                    <li>Health and psychosocial support</li>
-                                    <li>Education and literacy </li>
-                                    <li>Disaster/emergency response and relief </li>
-                                    <li>Awareness, fundraising and support of homeless artisans </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p>The MOBI was launched in October 2021 and is already providing its
+                            beneficiaries with crucial access to nutrition, support,
+                            education, healthcare and long term change.
+                        </p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sub-divB">
-                            <img src="./assets/images/Frame 26.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="div2">
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card-a">
-                            <span class="counter" data-count="1200">1,200 +</span>
-                            <p>Meals per month</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card-a">
-                            <span class="counter" data-count="500">500 +</span>
-                            <p>Families reached</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-12">
-                        <div class="card-b">
-                            <div class="div-a">
-                                <span class="counter" data-count="2500">2,500</span>
-                                <p>Target meals per month</p>
-                            </div>
-                            <div class="div-b">
-                                <p>Donate</p>
-                                <div id="progressBar">
-                                    <div id="myBar"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                        <p>
+                            The MOBI is an initiative that aims to reduce hunger and poverty
+                            in women and children, with a focus:
+                        </p>
+                        <ul>
+                            <li>Food & nutrition</li>
+                            <li>Health and psychosocial support</li>
+                            <li>Education and literacy </li>
+                            <li>Disaster/emergency response and relief </li>
+                            <li>Awareness, fundraising and support of homeless artisans </li>
+                        </ul>
                 </div>
             </div>
+            <div class="col-md-4 ">
+                    <img src="./assets/images/baby eating.png" alt="" class="img-fluid">
+            </div>
         </div>
+
+        <div class="about-stats">
+
+            <div class="col-lg-2 ">
+                <div class="meals-card">
+                    <h4 class="counter" data-count="1200">1,200 +</h4>
+                    <p>Meals per month</p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 ">
+                <div class="families-card">
+                    <h4 class="counter" data-count="500">500 +</h4>
+                    <p>Families reached</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="target-card">
+                    <div>
+                        <h4 class="counter" data-count="2500">2,500</h4>
+                        <p>Target meals per month</p>
+                    </div>
+                    <div>
+                        <p>Donate</p>
+                        <div id="progressBar">
+                            <div id="myBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
+
 
     <!--GALLERY -->
 
@@ -189,7 +204,7 @@
         <div class="container">
             <div class="main-div">
 
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <span class="opening-quote">''</span>
                         <p>
@@ -201,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-lg-5 col-md-6">
                     <div class="div2">
 
                         <div class="text-div">

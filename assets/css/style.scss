@@ -13,6 +13,7 @@ body{ font-family: 'rennersemi';}
     justify-content: space-around;
     align-items: center;
     
+    
     .nav-brand img{
         width: 280px;
         height: 250px;
@@ -33,7 +34,6 @@ body{ font-family: 'rennersemi';}
             text-decoration: none;
             color: black;
             font-size: 18px;
-            // font-family: poppins;
             font-weight: 500;
 
             &:hover{color: #FF7F00}
@@ -41,14 +41,86 @@ body{ font-family: 'rennersemi';}
         }
        
     }
-    .icon { display: none; }
+
+    #myNav{
+        display: none;
+        transition: 0.8s; 
+    }
+
+    .openbtn{ 
+        display: none;
+        position: relative;
+        top: -20px;
+    }
+
+
+    .overlay {  
+        height: 50vh;
+        width:50%;
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        background-color: #FF7F00;
+        overflow-x: hidden; 
+        transition: 0.8s; 
+    }
+    
+    
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px; 
+        transition: 0.8s; 
+    
+    }
+    
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: black;
+        display: block;
+        transition: 0.3s; 
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 60px;
+        color: black;
+    }
+  
+    @media   (max-width: 991px) {
+
+        .nav-links{display: none;}
+        .openbtn{
+            display: block;
+            font-size: 50px;
+        }
+
+    .nav-brand img{
+        width: 200px;
+        height: 180px;
+        margin-right: 200px;
+    }
+    
+    }
      
 }
 
 /* HERO */
 
 #hero{
-    margin-bottom: 200px;
+    margin-bottom: 190px;
 
     .main-div{
         display: flex;
@@ -72,98 +144,166 @@ body{ font-family: 'rennersemi';}
 
 /* ABOUT */
 
-#about{
+.about{
     background-color: black;
     color: white;
     padding-bottom: 100px;
 
-    .div1{
+    .about-content{
        display: flex;
-       justify-content: space-around;
+       justify-content: space-evenly;
        align-items: flex-end;
        position: relative;
        bottom: 110px;
 
-        .sub-divA{
+        .about-text{
 
-            .card1{
+            .about-card{
                 background-color: #FF7F00;
                 color: black;
                 padding: 60px;
                 line-height: 30px;
+                margin-bottom: 100px;
 
-                span{
-                    width: 100px;
-                    font-size: 23px;
+                h3{
+                    
+                    font-size: 28px;
                     font-weight: 700;
                     line-height: 1.8;
+                    font-family: 'rennersemi';
                 }
 
                 p{  
-                    margin-top: 50px;
                     font-size: 14px;
                     opacity: 70%;
+                    margin-top: 20px;
                 } 
             }
 
-            .card2{
+            p,ul{
                 font-size: 14px;
-                padding-top:100px;
                 opacity: 80%;
+                font-family: 'rennersemi';
             }
         }
     }
 
-    .div2{
+    .about-stats{
         display: flex;
         justify-content: center;
         gap: 30px;
+        padding:0px 32px;
 
-
-        span{
-            font-size: 30px;
-            font-weight: 600;
-        }
-
-        .card-a{
-            background-color: white;
-            color: black;
-            padding:20px 30px;
-
-            p{opacity: 70%;}
-        }
-
-        .card-b{
-            display: flex;
-            padding: 20px 0px;
-            justify-content: space-around;
-            background-color: #FF7F00;
-
-            .div-b{
-                padding: 10px;
-                text-align: right;
+            h4{
+                font-size: 30px;
+                font-weight: 600;
             }
 
-            #progressBar {
-                width: 300px;
-                height: 10px;
-                background-color: rgba(253, 249, 249, 0.501);
-                border-radius: 100px;
-              }
-              
-              #myBar {
-                width: 60%;
-                height: 30px;
-                height: 10px;
-                background-color:white;
-                border-radius: 100px;
-              }
+            .meals-card, .families-card{
+                background-color: white;
+                color: black;
+                padding:20px 30px;
 
-        }
+                p{opacity: 70%;}
+            }
+
+            .target-card{
+                display: flex;
+                padding: 20px 0px;
+                justify-content: space-around;
+                background-color: #FF7F00;
+                align-items: center;
+                
+                div:nth-child(2){
+                    text-align: right;
+                }
+
+                #progressBar {
+                    width: 300px;
+                    height: 10px;
+                    background-color: rgba(253, 249, 249, 0.501);
+                    border-radius: 100px;
+                }
+                
+                #myBar {
+                    width: 60%;
+                    height: 30px;
+                    height: 10px;
+                    background-color:white;
+                    border-radius: 100px;
+                    
+                }
+
+            }
     }
 
-}
 
+  /* Large devices (desktops, less than 1200px) */
+ 
+  @media  (min-width:992px) and  (max-width: 1199px) {
+
+      .about-content .about-text .about-card {padding: 30px;}
+
+      .about-stats {
+        .families-card , .meals-card {padding: 30px 10px ;}
+        .target-card{padding:20px 20px  ;}
+      }
+
+  }
+
+
+
+  
+  /* Medium devices (tablets, less than 992px) */
+ 
+    @media  (min-width:768px) and  (max-width: 991px) {
+
+        .about-content{
+            flex-direction: column;
+            bottom: 0px;
+            align-items: center;
+
+            .about-text .about-card{margin-bottom: 20px;}
+        }
+
+        .about-stats{
+            margin-top: 20px;
+            flex-wrap: wrap;
+
+        }
+
+          
+    }
+
+    /* Small devices  */
+
+    @media (max-width: 767px){ 
+
+            padding: 20px;
+
+            .about-content{
+                flex-direction: column;
+                bottom: 0px;
+                align-items: center;
+
+                .about-text .about-card{
+                    margin-bottom: 20px;
+                    padding: 20px;
+
+                    h3{font-size: 18px;}
+                }
+            }
+
+            .about-stats{
+                margin-top: 20px;
+                flex-wrap: wrap;}
+
+              .target-card { 
+                flex-direction: column;
+            }
+
+        }
+ }
 /* GALLERY */
 
 #gallery{
@@ -404,11 +544,13 @@ body{ font-family: 'rennersemi';}
 
 
 
+
+
  /*X-Large devices (large desktops, less than 1400px)*/
 
  @media  (min-width:1200px) and   (max-width: 1399px) {
 
-    body{ background-color: yellow;}
+    // body{ background-color: yellow;}
  }
 
 
@@ -420,7 +562,7 @@ body{ font-family: 'rennersemi';}
  
   @media  (min-width:992px) and  (max-width: 1199px) {
  
-    body{ background-color:green;}
+    // body{ background-color:green;}
 
     #about  {
             
@@ -448,14 +590,17 @@ body{ font-family: 'rennersemi';}
  
   @media  (min-width:768px) and  (max-width: 991px) {
 
-    body{ background-color:grey;}
+     body{ background-color:grey;}
 
-    .nav-bar{display: none;}
+     .nav-bar .overlay .closebtn {
+        top: 20px;
+        right: 80px;
+     }
 
 
     #hero .main-div{
         flex-direction: column-reverse;
-        align-items: flex-start;
+        text-align: center;
         gap: 40px;
         
         h1{width: 100%;}
@@ -475,12 +620,15 @@ body{ font-family: 'rennersemi';}
 
 
   #gallery{
-      .div1,.div2{padding: 0px;flex-direction: column;}
+      .div1,.div2{padding: 0px; /* flex-direction: column; */ overflow-x: hidden;}
   }
 
   #services{padding: 20px;}
 
-  #aims .main-div .card{padding: 20px;}
+  #aims .main-div{
+    gap: 80px;
+    .card{padding: 20px;}
+  } 
 
   #donate .main-div h2{margin-left: 0px;}
 
@@ -507,14 +655,18 @@ body{ font-family: 'rennersemi';}
 
  @media /* (min-width:576px) and */ (max-width: 767px)  { 
 
-    body{ background-color: blue;}
+    // body{ background-color: blue;}
 
-    .nav-bar{display: none;}
+    #hero {
+        margin-bottom: 40px;
 
-    #hero .main-div{
-        flex-direction: column-reverse;
-        
-        h1{width: 100%;}
+        .main-div{
+            flex-direction: column-reverse;
+            gap: 100px;
+           
+            
+            h1{width: 100%;}
+        }
     }
 
    #about  {
@@ -571,12 +723,15 @@ body{ font-family: 'rennersemi';}
  /* X-Small devices (portrait phones, less than 576px) */
 
  @media (max-width: 575px) { 
-
-    body{background-color:white}
+  
+    .nav-bar .nav-brand img{
+        margin-right: 60px;
+    }
 
     #about .div1{gap: 50px;}
 
     #services{padding: 0px 0px;}
+
     #footer{padding: 20px;}
  }
 

@@ -1,6 +1,6 @@
 
-
-
+/* COUNTER */
+ 
 $(document).ready(function($) {
     //Check if an element was in a screen
     function isScrolledIntoView(elem){
@@ -11,6 +11,7 @@ $(document).ready(function($) {
         return ((elemBottom <= docViewBottom));
     }
     //Count up code
+    
     function countUp() {
         $('.counter').each(function() {
           var $this = $(this), // <- Don't touch this variable. It's pure magic.
@@ -47,3 +48,47 @@ $(document).ready(function($) {
     });
 });
 
+
+
+
+      /*  MENU */
+        
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+
+      function openNav() {
+      document.getElementById("myNav").style.display ="block";
+      document.getElementById("myNav").style.height = "50%";
+
+      }
+
+      function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+
+      }
+
+
+      /* CODE FOR PROGRESS BAR */
+
+
+        window.onscroll = function() {move()};
+
+        var i = 0;
+        function move() {
+          if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 60) {
+                clearInterval(id);
+                i = 0;
+              } else {
+                width++;
+                elem.style.width = width + "%";
+              }
+            }
+          }
+        }
